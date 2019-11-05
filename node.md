@@ -1,13 +1,28 @@
 We r learning
-	Logging simple output
-	Node package manager(npm)
-	Express
-	Call backs
-	Nodemon
-	Package.Json
-•	Scripts
+ Logging simple output
+ Node package manager(npm)
+ Express
+ Call backs
+ Nodemon
+ Package.Json
+• Scripts
 
-
-First day(5th  November 2019)
+First day(5th November 2019)
 Create folder in vscode
-Npm init
+Npm init and enter while u fill in to create a json package.
+
+create a repo, push work to master
+create a new branch `git branch develop`
+`git checkout develop` to go to the develop branch.
+
+create index.js, write a console.log for Hello world and run it.
+
+installing express framework for browser display
+`npm install express --save` in the command line
+creates dependencies in the package.json with package `express`
+create a file `.gitignore` and include folders and files you want to ignore ie `/node_modules and package-lock.json`
+
+using express..how? by requiring it. `const express = require('express');` then `const app = express();`
+creating a server where browsers can connect by creating a listen method
+`app.listen(3000,function(){ console.log('listening on 3000') })`
+when we run index.js, it console logs but when we go to the port no. in the browser, it dispays `cannot GET/` because we havent sent anything back to the browser from our server
