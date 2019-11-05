@@ -26,3 +26,15 @@ using express..how? by requiring it. `const express = require('express');` then 
 creating a server where browsers can connect by creating a listen method
 `app.listen(3000,function(){ console.log('listening on 3000') })`
 when we run index.js, it console logs but when we go to the port no. in the browser, it dispays `cannot GET/` because we havent sent anything back to the browser from our server
+
+handling GET because we have READ
+we handle the get request with `app.get(path, callback)`
+our path in this case is `/`
+our callback(funcs passsed as args in other functions) tells the server what to do when the path is matched.
+it takes two arguements the `request` and a `response object`
+
+`app.get('/', function(req,res){ res.send('Hello World') })`
+
+express features
+-mvc,routing,session support,middleware etc
+-research about express
