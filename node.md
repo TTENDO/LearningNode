@@ -37,4 +37,12 @@ it takes two arguements the `request` and a `response object`
 
 express features
 -mvc,routing,session support,middleware etc
--research about express
+-research about express and node being event driven
+
+6th November 2019
+Changing the function to a fat arrow function
+`app.get('/', (req, res) => { res.send('Hello World') })`
+we install nodemon to deal with the issue of restarting the server everytime we make changes
+`npm install nodemon --save-dev`
+add a ascript in json package that tells it that start is the command that will restart our server
+`"start": "nodemon index.js"`
