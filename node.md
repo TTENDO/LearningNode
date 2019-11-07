@@ -46,3 +46,23 @@ we install nodemon to deal with the issue of restarting the server everytime we 
 `npm install nodemon --save-dev`
 add a ascript in json package that tells it that start is the command that will restart our server
 `"start": "nodemon index.js"`
+
+Routing
+determining how an application responds toa client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET,POST,PUT,DELETE)
+
+GET displays
+POST sends to the server from the form
+PUT does the editing
+DELETE does the deleting
+
+Using postman (use it to test our paths if we have nothing written there)
+Go to postman and select the request method in the dropdown and the URL of `localhost:3000`
+
+Handling non-existing routes
+`app.get("",function(req,res){res.render("Sorry non existent")})`
+
+Using PUG
+install pug using `npm install pug-cli -g` `npm install --save pug`
+`pug -w ./ -o.html -P`
+
+QUERY PARAMS
