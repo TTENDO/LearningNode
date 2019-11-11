@@ -1,0 +1,60 @@
+--BEGINNING OF LOGIN PAGE--*/
+
+/* the body for the login page*/
+.loginBody {
+  height: 100vh;
+  width: 100%;
+  /*font-weight: bold;
+    /*background-color:#FBCEB1 ;*/
+}
+
+/*--the form background on the login oage-*/
+.loginForm {
+  border-radius: 5%;
+  background-color: rgb(138, 138, 141);
+  padding: 20px;
+  width: 450px;
+  height: 350px;
+}
+
+/*--END OF LOGIN PAGE--*/
+
+/*BEGINNING-FOR THE FORM*/
+/* the body*/
+.first {
+  height: 100vh;
+  width: 100%;
+  font-weight: bold;
+  /*background-color:#FBCEB1 ;*/
+}
+/* the overall container*/
+.overall {
+  background-color: #fbceb1;
+  padding: 10px 30px 30px 30px;
+}
+/*the area with customer information*/
+.custInfo {
+  background-color: #f79862;
+  /* padding: 20px; */
+  margin-left: 50px;
+}
+
+fieldset.scheduler-border {
+  border: 2px solid #fff;
+  padding: 0px 15px 15px 15px;
+  margin: 0 0 1.5em 0 !important;
+}
+
+legend.scheduler-border {
+  width: unset !important;
+}
+
+/*buttons in the footer*/
+.low {
+  background-color: #fea62c;
+  border-color: #fea62c;
+  color: #000;
+  font-weight: bold;
+}
+
+/*END ----FOR THE FORM*/
