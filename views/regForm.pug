@@ -1,19 +1,62 @@
-doctype html
-html
-    head
-        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-        title First Pug Template 
-    body
+extends includes/layout.pug
+
+block content
+    div.container(border="1px solid blue")
         div.row.justify-content-center
             div.col-md-6
                 div.card-body
                     header.card-header
                         h4.card-title Register
-                    form
+                    form(method="POST" action="/thank")
                         div.form-row
                             div.col.form-group
                                 label First name 
-                                input.form-control(name="firstname")
+                                input.form-control(name="firstname" type="text")
                             div.col.form-group
                                 label Last name 
-                                input.form-control(name="lastname")
+                                input.form-control(name="lastname" type="text")
+                        div.form-row
+                            div.form-group.col-md-12
+                                label Email address
+                                input.form-control(name="email" type="email")
+                                small.form-text.text-muted We'll never share your email with anyone else
+                        div.form-row
+                            div.form-group
+                                label.form-check.form-check-inline
+                                    input.form-check-input(type="radio" name="gender" value="option1")
+                                    span.form-check-label Male
+                                label.form-check.form-check-inline
+                                    input.form-check-input(type="radio" name="gender" value="option2")
+                                    span.form-check-label Female
+                        div.form-row
+                            div.form-group.col-md-6
+                                label City
+                                select.form-control(name="city")
+                                    option(value="Mbarara") Mbarara
+                                    option(value="Kampala") Kampala
+                                    option(value="Rukungiri") Rukungiri
+                            div.form-group.col-md-6
+                                label Country
+                                select.form-control#inputState
+                                    option Choose
+                                        option Uzbekistan
+                                        option Russia
+                                        option(selected="") United States
+                                        option India
+                                        option Afganistan
+
+                            div.form-group.col-md-12
+                                label Create password
+                                input.form-control(type="password")
+                            div.form-group.col-md-12
+                                button.btn.btn-primary.btn-block(type="submit") Register
+                                small.text-muted By clicking the 'Sign Up'  button, you confirm that you accept our 
+                                br
+                                small.text-muted Terms of use and Privacy Policy
+
+                            div.border-top.card-body.text-center Have an account?
+                                a(href="") Log In
+
+
+
+

@@ -7,6 +7,39 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const path = require("path"); //helps node understand my app directory
+
+//connecting the app to the database by requiring mongoose
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+var nameSchema = new mongoose.Schema({
+  firstname: String,
+  lastname: String
+});
+
+//creating a model from it
+var User = mongoose.model("User", nameSchema);
+
+//building a CRUD endpoint using POST
+app.post("/thanks", (req, res) => {});
+
+//install body-parser and require it
+//add body-parser middleware to our application and configure it
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//saving data to the database
+app.post("/thank", (req, res) => {
+  var myData = new User(req.body);
+  myData
+    .save()
+    .then(item => {
+      res.send("item saved to database");
+    })
+    .catch(err => {
+      res.status(400).send("unable to save to database");
+    });
+});
+
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
@@ -37,11 +70,12 @@ app.post("/thanks", (req, res) => {
   //res.send(req.body);
   res.send("Hello " + req.body.firstname); //this printds hello ree bcoz its what i input in the form*/
 
-  res.render("cohort",{
-    name: req.body.firstname + ' ' + req.body.lastname,
-    emailadd: req.body.email
-   
-  })
+  res.render("cohort", {
+    name: req.body.firstname + " " + req.body.lastname,
+    emailadd: req.body.email,
+    frmCity: req.body.city
+    //frmCountry: req.body.country.selected
+  });
 
   //res.render("regForm");
 });
@@ -49,6 +83,9 @@ app.post("/thanks", (req, res) => {
 app.listen(3009, function() {
   console.log("listening on 3009");
 });
+
+//connecting to the database `node-demo`
+mongoose.connect("mongodb://localhost:27017/node-demo");
 
 /* var http = require('http');
 

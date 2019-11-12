@@ -66,3 +66,25 @@ install pug using `npm install pug-cli -g` `npm install --save pug`
 `pug -w ./ -o.html -P`
 
 QUERY PARAMS
+
+---
+
+MONGODB
+-mongoose helps us create schemas for mongo db
+-here the structure is database,collection,document
+-A schema maps to a MongoDB collection and defines the shape of the documents within that collection
+
+Connecting to the database
+installing mongoose
+`npm install mongoose --save`
+we need to connect to the database in our index.js file.
+`var mongoose = require("mongoose"); mongoose.Promise = global.Promise; mongoose.connect("mongodb://localhost:27017/node-demo");`
+
+Creating the database Schema
+`var nameSchema = new mongoose.Schema({ firstName: String, lastNameName: String });`
+
+//creating a model from it
+`var User = mongoose.model("User", nameSchema);`
+
+//building a CRUD endpoint using POST
+`app.post("/addname", (req, res) => {});`

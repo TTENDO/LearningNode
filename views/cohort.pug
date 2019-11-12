@@ -1,9 +1,7 @@
+extends includes/layout.pug
 
-doctype html
-html
-    head
-    body
-        p This is #{name}'s work
-            li The full name is #{name} as mentioned earlier
-            li Email address is #{emailadd}
-            li This human is from #{frmCity} in Uganda but also resides in #{frmCountry}
+block content
+    p This is #{name}'s work
+        li The full name is #{name} as mentioned earlier
+        li Email address is #{emailadd}
+        li This human is from #{frmCity} in Uganda but also resides in #{frmCountry}
