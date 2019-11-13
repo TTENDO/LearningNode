@@ -88,3 +88,14 @@ Creating the database Schema
 
 //building a CRUD endpoint using POST
 `app.post("/addname", (req, res) => {});`
+
+PROMISES
+they're receipts that show that your data has been saved to the database
+`.then` ----saved
+`.catch` -----unsuccessful
+
+USING SHELL TO VIEW DATABASES
+`show dbs`
+`use node-demo`
+`show collections`
+`db.users.find()`
