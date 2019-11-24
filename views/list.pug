@@ -2,16 +2,22 @@ extends includes/layout.pug
 
 block content
     header.card-reader
-        h4.card-title REGISTERED USERS
-    table.table
-        thead.thead-dark
-            tr
-                th Firstname
-                th Lastname
-                th City
-            tbody
-                each user in users/*for each user create a row with columns firstname,lastname and city*/
+    div.row
+        div.col-md-4
+        div.col-md-4
+            h4.card-title REGISTERED USERS
+            table.table
+                thead.thead-dark
                     tr
-                        td #{user.firstname}
-                        td #{user.lastname}
-                        td #{user.city}
+                        th Firstname
+                        th Lastname
+                        th City
+                    tbody
+                        each user in users/*for each user create a row with columns firstname,lastname and city*/
+                            tr
+                                td #{user.firstname}
+                                td #{user.lastname}
+                                td #{user.city}
+
+        div.col-md-4 
+
